@@ -1,4 +1,4 @@
-def bubbleSort(arr: [int], size: int):
+def bubbleSort(arr: int, size: int):
     for i in range(size,1,-1):
         swaps = 0
         for j in range(i-1):
