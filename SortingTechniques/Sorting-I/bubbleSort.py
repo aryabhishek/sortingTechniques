@@ -8,3 +8,4 @@ def bubbleSort(arr: int, size: int):
 
         if not swaps:
             break
+
