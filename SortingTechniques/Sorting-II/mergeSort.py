@@ -24,20 +24,20 @@ def merge(arr, low, mid, high):
         arr[i] = temp[i-low]
 
 
-def mergeSort(arr, low, high):
+def merge_sort(arr, low, high):
     if low == high:
         return
     
     mid = (low + high) // 2
 
-    mergeSort(arr, low, mid)
-    mergeSort(arr, mid + 1, high)
+    merge_sort(arr, low, mid)
+    merge_sort(arr, mid + 1, high)
     merge(arr, low, mid, high)
 
 
 # Testing the code
 if __name__ == "__main__":
     a = [8,3,73,84,12,0,21,82,66,69,1]
-    mergeSort(a,0,len(a)-1)
+    merge_sort(a,0,len(a)-1)
     print(a)
     print("Time complexity is n*log(n)")

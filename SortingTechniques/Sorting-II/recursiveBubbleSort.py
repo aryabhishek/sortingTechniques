@@ -1,4 +1,4 @@
-def bubbleSort(arr, idx):
+def recursive_bubble_sort(arr, idx):
     if idx == 0:
         return
     
@@ -6,10 +6,10 @@ def bubbleSort(arr, idx):
         if arr[i] > arr[i+1]:
             arr[i], arr[i+1] = arr[i+1], arr[i]
 
-    bubbleSort(arr, idx - 1)
+    recursive_bubble_sort(arr, idx - 1)
 
 if __name__ == "__main__":
     arr = [5,4,3,2,1]
     n= len(arr)
-    bubbleSort(arr,n)
+    recursive_bubble_sort(arr,n)
     print(arr)
