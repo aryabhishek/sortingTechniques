@@ -12,6 +12,6 @@ def find_max(arr):
 if __name__ == "__main__":
     arr = [1,2,3,4,5]
 
-    largest_element = find_max(arr)
+    largest_element = find_max(arr) # finding max
 
     print(largest_element)
