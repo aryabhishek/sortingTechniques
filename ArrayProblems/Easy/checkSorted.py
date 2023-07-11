@@ -1,5 +1,5 @@
 def is_sorted(arr):
-    """Return 1 if the array is sorted in ascending order otherwise 0"""
+    """Returns 1 if the array is sorted in ascending order otherwise 0"""
 
     n = len(arr)
 
