@@ -1,22 +1,22 @@
 def solution(a, k):
-    i, j = 0, 0
+    left, right = 0, 0
     n = len(a)
 
     total = a[0]
     ans = 0
 
-    while j < n:
+    while right < n:
 
-        while i <= j and total > k:
-            total -= a[i]
-            i += 1
+        while left <= right and total > k:
+            total -= a[left]
+            left += 1
 
         if total == k:
-            ans = max(ans, j - i + 1)
+            ans = max(ans, right - left + 1)
 
-        j += 1
-        if j < n:
-            total += a[j]
+        right += 1
+        if right < n:
+            total += a[right]
 
     return ans
 
