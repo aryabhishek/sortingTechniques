@@ -17,11 +17,12 @@ def better(arr): #TC: O(2n), SC: O(n)
             return key
         
 
+# Moore's Voting Algorithm
 def optimal(arr): # TC: O(n), SC: O(1)
     vote = 1
     major = arr[0]
     for i in range(1, len(arr)):
-            
+
         if arr[i] == major:
             vote += 1
         else:
