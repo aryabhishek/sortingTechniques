@@ -7,7 +7,7 @@ def binary_search(nums, target):
 
         if nums[m] == target:
             return m
-        
+
         elif nums[m] < target:
             l = m + 1
 
@@ -18,7 +18,7 @@ def binary_search(nums, target):
 
 
 if __name__ == "__main__":
-    arr = [4,5,6,7,8,9,1,3]
+    arr = [4, 5, 6, 7, 8, 9, 1, 3]
     target = 9
 
     print(binary_search(arr, target))
