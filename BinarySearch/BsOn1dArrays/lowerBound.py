@@ -20,5 +20,7 @@ def lower_bound(arr, x):
 
 
 if __name__ == "__main__":
+    import bisect
     nums = [1, 2, 2, 3]
+    print(bisect.bisect_left(nums, 0))
     print(lower_bound(nums, 0))

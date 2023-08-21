@@ -20,7 +20,9 @@ def upper_bound(arr, x):
 
 
 if __name__ == "__main__":
+    import bisect
     nums = [1, 4, 7, 8, 10]
     target = 7
+    print(bisect.bisect_right(nums, target))
 
     print(upper_bound(nums, target))
