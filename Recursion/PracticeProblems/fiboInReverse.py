@@ -29,4 +29,3 @@ if __name__ == "__main__":
     # print_fibo_in_reverse(n)
     os.system("cls")
     fib2(n, 0, 1)
-    my_fib(n, 0, 1)
