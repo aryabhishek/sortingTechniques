@@ -37,28 +37,3 @@ bt7 = BinaryTreeNode(7)
 bt3.insert_left(bt6)
 bt3.insert_right(bt7)
 bt.display(bt)
-
-
-def levelOrder(root: BinaryTreeNode) -> list[list[int]]:
-    q = deque()
-
-    q.append(root)
-    ans = []
-
-    while len(q) > 0:
-        temp = []
-
-        for _ in range(len(q)):
-            node = q[0]
-            q.popleft()
-            temp.append(node.val)
-            if node.left is not None:
-                q.append(node.left)
-            if node.right is not None:
-                q.append(node.right)
-
-        ans.append(temp)
-    return ans
-
-
-
