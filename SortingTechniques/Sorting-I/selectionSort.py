@@ -1,4 +1,4 @@
-def selectionSort(self, arr,n):
+def selection_sort(self, arr,n):
   
     for i in range(n - 1):
         min_idx = i
