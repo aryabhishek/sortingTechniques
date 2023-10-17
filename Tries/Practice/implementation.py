@@ -45,8 +45,5 @@ obj.insert("abc")
 obj.insert("hello")
 obj.insert("nigga")
 
-
-if obj.startsWith("n"):
-    obj.insert("sekrio")
-
 print(obj.search("sekiro"))
+print(obj.search("nigga"))
