@@ -2,7 +2,7 @@ from collections import deque
 
 
 def nearest_smaller_to_right(arr):
-    stk = []
+    stk = deque()
     res = []
 
     for i in range(len(arr)-1, -1, -1):
