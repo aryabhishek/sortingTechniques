@@ -45,11 +45,11 @@ def maximum_area_histogram(heights: list) -> int:
     n = len(heights)
     left = nearest_smaller_to_left(heights)
     right = nearest_smaller_to_right(heights)
-    width = [right[i] - left[i] for i in range(n)]
+    width = [right[i] - left[i] + 1 for i in range(n)]
     area = [heights[i] * width[i] for i in range(n)]
     return max(area)
 
 
 if __name__ == "__main__":
-    heights = [6, 2, 5, 4, 5, 1, 6]
+    heights = [2, 3, 3, 2]
     print("Maximum Area of Histogram is", maximum_area_histogram(heights))
