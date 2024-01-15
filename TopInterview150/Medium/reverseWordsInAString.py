@@ -11,11 +11,12 @@ The returned string should only have a single space separating the words. Do not
 Link: https://leetcode.com/problems/reverse-words-in-a-string/
 """
 
+
 class Solution:
     def reverseWords(self, s: str) -> str:
         word_list = s.split()
-        ans = ''
-        for i in range(len(word_list)-1, -1, -1):
+        ans = ""
+        for i in range(len(word_list) - 1, -1, -1):
             ans += word_list[i] + " "
 
         return ans.rstrip()
