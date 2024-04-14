@@ -1,6 +1,3 @@
-from collections import deque
-
-
 def create_adjacency_list(V, edges):
     adjacency_list = {i: [] for i in range(V)}
 
@@ -12,7 +9,7 @@ def create_adjacency_list(V, edges):
     return adjacency_list
 
 
-def detect_cycle(start, adj, vis):
+def detect_cycle(start, adj, vis):  # bfs
     vis[start] = 1
     q = deque([(start, -1)])
 
@@ -31,6 +28,18 @@ def detect_cycle(start, adj, vis):
     return False
 
 
+def dfs(start, parent, adj, vis):
+    vis[start] = 1
+
+    for adj_node in adj[start]:
+        if not vis[adj_node]:
+            if dfs(adj_node, start, adj, vis):
+                return True
+        elif parent != adj_node:
+            return True
+    return False
+
+
 def main():
     V, E = map(int, input().split())
     edges = []
@@ -43,7 +52,7 @@ def main():
 
     for i in range(V):
         if not visited[i]:
-            if detect_cycle(i, adj_list, visited):
+            if dfs(i, -1, adj_list, visited):
                 return print("True")
     print("False")
 
