@@ -1,12 +1,26 @@
+<<<<<<< HEAD
 class Solution:
     def canPartition(self, nums: list[int]) -> bool:
+=======
+from typing import List
+
+
+class Solution:
+    def canPartition(self, nums: List[int]) -> bool:
+>>>>>>> 50d249e (done)
         s = sum(nums)
 
         if s % 2 == 0:
 
+<<<<<<< HEAD
             dp = [[-1]*(s//2 + 1) for i in range(len(nums))]
 
             return self.solve(len(nums) - 1, s//2, nums, dp)
+=======
+            dp = [[-1] * (s // 2 + 1) for i in range(len(nums))]
+
+            return self.solve(len(nums) - 1, s // 2, nums, dp)
+>>>>>>> 50d249e (done)
 
         return False
 
@@ -28,3 +42,8 @@ class Solution:
 
         dp[ind][target] = notTaken or taken
         return dp[ind][target]
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 50d249e (done)
