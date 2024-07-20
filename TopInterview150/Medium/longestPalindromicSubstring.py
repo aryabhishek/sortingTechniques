@@ -42,14 +42,15 @@ class Solution:
 
     def is_palin(self, i, j, s):
         if i >= j:
+            self.memo[i][j] = 1
             return 1
 
         if self.memo[i][j] != -1:
-            return 1
+            return self.memo[i][j]
 
         if s[i] == s[j]:
             self.memo[i][j] = self.is_palin(i + 1, j - 1, s)
-            return self.memo[i][j]
+        else:
+            self.memo[i][j] = 0
 
-        self.memo[i][j] = 0
-        return 0
+        return self.memo[i][j]
