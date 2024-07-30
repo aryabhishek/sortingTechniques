@@ -34,6 +34,8 @@ Constraints:
 
 1 <= chars.length <= 2000
 chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
+
+https://leetcode.com/problems/string-compression
 """
 
 from typing import List
