@@ -13,7 +13,32 @@ def trap(arr: list[int]) -> int:
 
     return sum(water)
 
+
+class Solution:  # O(n)
+    def trap(self, arr: list[int]) -> int:
+        n = len(arr)
+        left_max = right_max = total = 0
+        l, r = 0, n - 1
+
+        while l < r:
+            if arr[l] <= arr[r]:
+                if left_max > arr[l]:
+                    total += left_max - arr[l]
+                else:
+                    left_max = arr[l]
+                l += 1
+            else:
+                if right_max > arr[r]:
+                    total += right_max - arr[r]
+                else:
+                    right_max = arr[r]
+                r -= 1
+
+        return total
+
+
 if __name__ == "__main__":
-    height = [4,2,0,3,2,5]
+    height = [4, 2, 0, 3, 2, 5]
 
     print(trap(height))
+    print(Solution().trap(height))
