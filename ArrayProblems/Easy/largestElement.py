@@ -1,3 +1,9 @@
+"""
+Given an array, arr. The task is to find the largest element in it.
+
+https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=largest-element-in-array
+"""
+
 def find_max(arr):
     n = len(arr)
 
