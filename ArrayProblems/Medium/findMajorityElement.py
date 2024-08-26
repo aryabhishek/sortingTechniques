@@ -1,3 +1,10 @@
+"""
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+https://leetcode.com/problems/majority-element/
+"""
+
 def brute_force(arr): # TC: O(n*log(n)), SC: O(1)
     arr.sort()
     mid = arr[len(arr)//2]

@@ -1,3 +1,10 @@
+"""
+Given an integer array nums, find the 
+subarray with the largest sum, and return its sum.
+
+https://leetcode.com/problems/maximum-subarray/
+"""
+
 def brute_force(arr): # TC: O(n^2), SC: O(1)
     n = len(arr)
 

@@ -1,3 +1,9 @@
+"""
+Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+
+https://leetcode.com/problems/rotate-array/
+"""
+
 def rotate_arr_by_k(arr, k): # TC: O(n+k), SC: O(k)
     n = len(arr)
     k = k % n

@@ -1,3 +1,9 @@
+"""
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+https://leetcode.com/problems/missing-number/
+"""
+
 def brute_force(arr): # TC: O(n^2), SC: O(1)
 
     for num in arr:

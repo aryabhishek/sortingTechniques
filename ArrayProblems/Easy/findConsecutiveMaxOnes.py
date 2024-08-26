@@ -1,3 +1,9 @@
+"""
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+https://leetcode.com/problems/max-consecutive-ones/
+"""
+
 def max_consecutive_ones(arr):
     maxi = 0
     count = 0
